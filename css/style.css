@@ -76,20 +76,77 @@ footer {
     position: fixed;
     background: url("../img/imagem.jpg") repeat center center fixed;
     background-size: cover;
+    backdrop-filter: blur(10px);
 }
 
 form {
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     padding: 20px;
-    background-color: transparent;
-    border: 2px solid (rgba(255, 255, 255, 0.2));
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 10px black;
-    border-radius: 10px;
+    color: white;
     width: 320px;
     margin: auto;
     margin-top: 200px;
 }
+
+form::after,form::before{
+    content:'';
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    background: linear-gradient(45deg, red,blue,red,blue,blue,red,blue,red,red,blue,red,blue,blue,red,blue,red);
+    background-size: 1500%;
+    border-radius: 8px;
+    animation: animar 10s linear infinite;
+}
+
+@keyframes animar {
+    0%{
+        background-position: 0 ;
+    }
+
+    100%{
+        background-position: 100%;
+    }
+}
+
+form::after {
+    filter: blur(100px)
+}
+
+label:hover{
+    transition: 0.2s all ease-in;
+    transition: 0.4s all ease-in-out;
+    font-size: large
+}
+
+label:not(hover){
+    transition: 0.4s all ease-in-out;
+}
+
+input:hover{
+    transition: 0.2s all ease-in;
+    transition: 0.4s all ease-in-out;
+    padding: 9px;
+}
+
+input:not(hover){
+    transition: 0.4s all ease-in-out;
+}
+
+.botao1 button:hover,.botao2 button:hover{
+    transition: 0.2s all ease-in;
+    transition: 0.4s all ease-in-out;
+    padding: 7px 135px 7px;
+}
+
+.botao1 button:not(hover),.botao2 button:not(hover){
+    transition: 0.4s all ease-in-out;
+}
+    
 
 input {
     width: 90%;
@@ -135,6 +192,6 @@ input {
     color: white;
     font-family: "Poppins";
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 255, 0, 0.61);
     background-color: rgba(0, 255, 0, 0.61);
 }
