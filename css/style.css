@@ -5,7 +5,6 @@ html {
     height: 100%;
 }
 
-
 nav {
     font-family: "Poppins";
     background-color: darkblue;
@@ -185,7 +184,7 @@ footer a {
     backdrop-filter: blur(10px);
 }
 
-form {
+#login form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,7 +196,7 @@ form {
     margin-top: 200px;
 }
 
-form::after,form::before{
+#login form::after, #login form::before{
     content:'';
     position: absolute;
     z-index: -1;
@@ -219,42 +218,42 @@ form::after,form::before{
     }
 }
 
-form::after {
+.dados form::after {
     filter: blur(100px)
 }
 
-label:hover{
+.dados label:hover{
     transition: 0.2s all ease-in;
     transition: 0.4s all ease-in-out;
     font-size: large
 }
 
-label:not(hover){
+.dados label:not(hover){
     transition: 0.4s all ease-in-out;
 }
 
-input:hover{
+.dados input:hover{
     transition: 0.2s all ease-in;
     transition: 0.4s all ease-in-out;
     padding: 9px;
 }
 
-input:not(hover){
+.dados input:not(hover){
     transition: 0.4s all ease-in-out;
 }
 
-.botao1 button:hover,.botao2 a:hover{
+.dados .botao1 button:hover,.dados .botao2 a:hover{
     transition: 0.2s all ease-in;
     transition: 0.4s all ease-in-out;
     padding: 7px 135px 7px;
 }
 
-.botao1 button:not(hover),.botao2 a:not(hover){
+.dados .botao1 button:not(hover),.dados .botao2 a:not(hover){
     transition: 0.4s all ease-in-out;
 }
     
 
-input {
+.dados input {
     width: 90%;
     padding: 6px;
     margin-bottom: 8px;
@@ -294,7 +293,7 @@ input {
     padding: 5px 130px 5px;
 }
 
-.botao1 button{
+ .dados .botao1 button{
     color: white;
     font-family: "Poppins";
     border-radius: 5px;
@@ -302,7 +301,85 @@ input {
     background-color: rgb(17, 17, 175);
 }
 
-.botao2 a{
+.dados .botao2 a{
+    font-size: 14px;
+    padding: 5px 125px 5px;
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins";
+    border-radius: 5px;
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.652);
+}
+
+
+#contato{
+    background: url("../img/imagem.jpg") repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+}
+
+#forms {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#forms h1 {
+    font-family: "Poppins";
+    text-transform: uppercase;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+#forms form {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#forms label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#forms input[type="text"],
+#forms input[type="email"],
+#forms input[type="message"],
+#forms input[type="number"],
+#forms input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#forms input[type="text"]:focus,
+#forms input[type="email"]:focus,
+#forms input[type="message"]:focus,
+#forms input[type="number"]:focus,
+#forms input[type="password"]:focus {
+    outline: none;
+    border-color: #ff0000;
+    box-shadow: 0 0 5px #af4c4c;
+}
+
+#forms .botao1 button{
+    color: white;
+    font-family: "Poppins";
+    border-radius: 5px;
+    border: 1px solid blue;
+    background-color: rgb(17, 17, 175);
+}
+
+#forms .botao2 a{
     font-size: 14px;
     padding: 5px 125px 5px;
     text-decoration: none;
