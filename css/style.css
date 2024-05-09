@@ -8,8 +8,7 @@ html {
 
 nav {
     font-family: "Poppins";
-    background-color: rgb(11, 60, 196);
-    padding: 20px 20px;
+    background-color: darkblue;
     color: white;
     justify-content: space-between;
     /* Torna os item mais flexiveis */
@@ -17,6 +16,13 @@ nav {
     /* Cria espaçamento entre os itens */
     justify-content: space-between;
     align-items: center;
+}
+
+nav #logo_nav {
+    width: 160px;
+    margin-top: -20px;
+    margin-left: 50px;
+    margin-bottom: -12px;
 }
 
 nav .nav-link ul {
@@ -38,6 +44,7 @@ nav .nav-link ul li a {
 nav .nav-login a {
     color: white;
     text-decoration: none;
+    margin-right: 50px;
 }
 
 a:hover {
@@ -56,11 +63,105 @@ a:not(hover) {
     font-family: "Poppins";
     border-bottom: solid 5px aliceblue;
     height: 100%;
+    margin-top: -5px;
+}
+
+.content-secao {
+    margin-left: 20px;
+    color: white;
+}
+
+#id-secao1 {
+    position: relative;
+    display: block;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(14, 77, 76);
+    filter: opacity(100%);
+}
+
+#id-secao1::before{
+    background: url("../img/futebol.jpg");
+    content: "";
+    filter: blur(10px) brightness(80%);
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#id-secao2 {
+    position: relative;
+    display: block;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(14, 77, 76);
+    filter: opacity(100%);
+}
+
+#id-secao2::before{
+    background: url("../img/basquete.webp");
+    content: "";
+    filter: blur(10px) brightness(80%);
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#id-secao3 {
+    position: relative;
+    display: block;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(14, 77, 76);
+    filter: opacity(100%);
+}
+
+#id-secao3::before{
+    background: url("../img/futebol-americano.webp");
+    content: "";
+    filter: blur(10px) brightness(80%);
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#id-secao4 {
+    position: relative;
+    display: block;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(14, 77, 76);
+    filter: opacity(100%);
+}
+
+#id-secao4::before{
+    background: url("../img/ufc.jpg");
+    content: "";
+    filter: blur(10px) brightness(80%);
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 footer {
     font-family: "Poppins";
-    background-color: rgb(11, 60, 196);
+    background-color: darkblue;
     color: white;
     text-align: center;
     /* permanecer fixo independente da rolagem da pagina */
@@ -68,6 +169,11 @@ footer {
     bottom: 0;
     width: 100%;
     padding: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
 }
 
 #login{
@@ -137,13 +243,13 @@ input:not(hover){
     transition: 0.4s all ease-in-out;
 }
 
-.botao1 button:hover,.botao2 button:hover{
+.botao1 button:hover,.botao2 a:hover{
     transition: 0.2s all ease-in;
     transition: 0.4s all ease-in-out;
     padding: 7px 135px 7px;
 }
 
-.botao1 button:not(hover),.botao2 button:not(hover){
+.botao1 button:not(hover),.botao2 a:not(hover){
     transition: 0.4s all ease-in-out;
 }
     
@@ -180,7 +286,7 @@ input {
     justify-content: center;
 }
 
-.botao1 button,.botao2 button{
+.botao1 button,.botao2 a{
     font-family: "Poppins";
     border-radius: 5px;
     border: 1px solid black;
@@ -192,6 +298,17 @@ input {
     color: white;
     font-family: "Poppins";
     border-radius: 5px;
-    border: 1px solid rgba(0, 255, 0, 0.61);
-    background-color: rgba(0, 255, 0, 0.61);
+    border: 1px solid blue;
+    background-color: rgb(17, 17, 175);
+}
+
+.botao2 a{
+    font-size: 14px;
+    padding: 5px 125px 5px;
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins";
+    border-radius: 5px;
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.652);
 }
